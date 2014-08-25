@@ -49,7 +49,7 @@ Install the pydev plugin from the following update-site.
 
     http://pydev.org/updates
 
-It is important to install version 2.8.2 this is done by unchecking the *Show only the latest versions of available software. 
+It is important to install version 2.8.2 this is done by unchecking the *Show only the latest versions of available software*. 
 
 
 Then get catkin (cmake) to generate an eclipse project for your workspace.
