@@ -1,5 +1,7 @@
-<h1 id="setup">Setup</h1>
-<h2 id="create-a-workspace">Create a workspace</h2>
+<h1>Setup</h1>
+
+<h2>Create a workspace</h2>
+
 <pre><code>cd ~
 mkdir -p ros/src
 cd ros/src
@@ -9,28 +11,66 @@ cd ~/ros
 catkin_make
 source devel/setup.bash
 </code></pre>
+
 <p>optionally add <code>source ~/ros/setup.bash</code> to <code>.bashrc</code> in order to automatically have ros support in every terminal you open.</p>
-<h2 id="clone-au-repositories">Clone au repositories</h2>
+
+<h2>Clone au repositories</h2>
+
 <p>Enter the source directory</p>
+
 <pre><code>cd ~/ros/src
 </code></pre>
+
 <p>Clone the dynamixel_motors package</p>
+
 <pre><code>git clone https://github.com/au-crustcrawler/dynamixel_motor.git
 </code></pre>
-<p>Clone the au_crustcrawler_base package</p>
+
+<p>Clone the au<em>crustcrawler</em>base package</p>
+
 <pre><code>git clone https://github.com/au-crustcrawler/au_crustcrawler_base.git
 </code></pre>
-<p>Clone the au_crustcrawler_moveit package</p>
+
+<p>Clone the au<em>crustcrawler</em>moveit package</p>
+
 <pre><code>git clone https://github.com/au-crustcrawler/au_crustcrawler_moveit.git
 </code></pre>
+
 <p>Clone the quickui package</p>
+
 <pre><code>git clone https://github.com/au-crustcrawler/quickui.git
 </code></pre>
+
 <p>Enter the root workspace directory</p>
+
 <pre><code>cd ~/ros
 catkin_make
 source devel/setup.bash
 </code></pre>
-<h2 id="whats-next">Whats next</h2>
-<p>Look at the documentation for <a href="https://github.com/au-crustcrawler/au_crustcrawler_base/blob/master/readme.md">au_crustcrawler_base</a> package
-and <a href="https://github.com/au-crustcrawler/au_crustcrawler_moveit/blob/master/README.md">au_crustcrawler_moveit</a> package</p>
+
+<h2>Configuring Eclipse</h2>
+
+<p>This guide is based on C/C++ Eclipse Indigo version.
+Install the pydev plugin from the following update-site.</p>
+
+<pre><code>http://pydev.org/updates
+</code></pre>
+
+<p>It is important to install version 2.8.2 this is done by unchecking the *Show only the latest versions of available software. </p>
+
+<p>Then get catkin (cmake) to generate an eclipse project for your workspace.
+A single project is being generated with all the packages in one project.</p>
+
+<pre><code>catkin_make --force-cmake -G"Eclipse CDT4 - Unix Makefiles"
+</code></pre>
+
+<p>Then in eclipse select <em>import -> existing project</em> and then select <em>~/ros/build</em> as the root folder and select Project@Build project. Do not select copy projects into workspace.</p>
+
+<p>source link <a href="http://wiki.ros.org/IDEs">ROS IDE</a>.</p>
+
+<p>Remeber to use the catkin steps and not the old deprecated rosbuild steps. </p>
+
+<h2>Whats next</h2>
+
+<p>Look at the documentation for <a href="https://github.com/au-crustcrawler/au_crustcrawler_base/blob/master/readme.md">au<em>crustcrawler</em>base</a> package
+and <a href="https://github.com/au-crustcrawler/au_crustcrawler_moveit/blob/master/README.md">au<em>crustcrawler</em>moveit</a> package</p>

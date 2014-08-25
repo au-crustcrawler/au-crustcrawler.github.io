@@ -41,7 +41,29 @@ Enter the root workspace directory
     cd ~/ros
     catkin_make
     source devel/setup.bash
-    
+
+Configuring Eclipse
+---------
+This guide is based on C/C++ Eclipse Indigo version.
+Install the pydev plugin from the following update-site.
+
+    http://pydev.org/updates
+
+It is important to install version 2.8.2 this is done by unchecking the *Show only the latest versions of available software. 
+
+
+Then get catkin (cmake) to generate an eclipse project for your workspace.
+A single project is being generated with all the packages in one project.
+
+    catkin_make --force-cmake -G"Eclipse CDT4 - Unix Makefiles"
+
+Then in eclipse select *import -> existing project* and then select *~/ros/build* as the root folder and select Project@Build project. Do not select copy projects into workspace.
+
+source link [ROS IDE](http://wiki.ros.org/IDEs).
+
+Remeber to use the catkin steps and not the old deprecated rosbuild steps. 
+
+
 Whats next
 ---------
 Look at the documentation for [au_crustcrawler_base](https://github.com/au-crustcrawler/au_crustcrawler_base/blob/master/readme.md) package
