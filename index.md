@@ -4,21 +4,21 @@ Create a workspace
 -----------
 
     cd ~
-    mkdir -p ros/src
-    cd ros/src
+    mkdir -p catkin_ws/src
+    cd catkin_ws/src
     source /opt/ros/hydro/setup.bash
     catkin_init_workspace .
-    cd ~/ros
+    cd ~/catkin_ws
     catkin_make
     source devel/setup.bash
 
-optionally add `source ~/ros/setup.bash` to `.bashrc` in order to automatically have ros support in every terminal you open.
+optionally add `source ~/catkin_ws/setup.bash` to `.bashrc` in order to automatically have ros support in every terminal you open.
 
 Clone au repositories
 -----------
 Enter the source directory
 
-    cd ~/ros/src
+    cd ~/catkin_ws/src
     
 Clone the dynamixel_motors package
 
@@ -38,7 +38,7 @@ Clone the quickui package
     
 Enter the root workspace directory
 
-    cd ~/ros
+    cd ~/catkin_ws
     catkin_make
     source devel/setup.bash
 
