@@ -3,22 +3,22 @@
 <h2>Create a workspace</h2>
 
 <pre><code>cd ~
-mkdir -p ros/src
-cd ros/src
+mkdir -p catkin_ws/src
+cd catkin_ws/src
 source /opt/ros/hydro/setup.bash
 catkin_init_workspace .
-cd ~/ros
+cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 </code></pre>
 
-<p>optionally add <code>source ~/ros/setup.bash</code> to <code>.bashrc</code> in order to automatically have ros support in every terminal you open.</p>
+<p>optionally add <code>source ~/catkin_ws/setup.bash</code> to <code>.bashrc</code> in order to automatically have ros support in every terminal you open.</p>
 
 <h2>Clone au repositories</h2>
 
 <p>Enter the source directory</p>
 
-<pre><code>cd ~/ros/src
+<pre><code>cd ~/catkin_ws/src
 </code></pre>
 
 <p>Clone the dynamixel_motors package</p>
@@ -43,7 +43,7 @@ source devel/setup.bash
 
 <p>Enter the root workspace directory</p>
 
-<pre><code>cd ~/ros
+<pre><code>cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 </code></pre>
