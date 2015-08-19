@@ -12,7 +12,7 @@ Create a workspace
     catkin_make
     source devel/setup.bash
 
-optionally add `source ~/catkin_ws/setup.bash` to `.bashrc` in order to automatically have ros support in every terminal you open.
+optionally add `source ~/catkin_ws/devel/setup.bash` to `.bashrc` in order to automatically have ros support in every terminal you open.
 
 Clone au repositories
 -----------
